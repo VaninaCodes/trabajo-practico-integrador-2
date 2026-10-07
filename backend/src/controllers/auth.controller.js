@@ -7,11 +7,11 @@ import { profileModel } from "../models/profile.model.js";
 export const register = async (req, res) =>{
     try{
         const validatedData=matchedData(req);
-        const hashPassword= await hashPassword(validatedData.password);
+        const hashedPassword= await hashPassword(validatedData.password);
         const newUser = await userModel.create({
             username:validatedData.username,
             email: validatedData.email,
-            password: hashPassword,
+            password: hashedPassword,
             role: validatedData.role || 'user',
         });
         await profileModel.create({user_id: newUser.id});

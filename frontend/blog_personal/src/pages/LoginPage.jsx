@@ -8,7 +8,7 @@ export const LoginPage = () => {
   const [loading, setLoading] = useState(false);
 
   const { formState, handleInputChange } = useForm({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -18,14 +18,14 @@ export const LoginPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch("http://localhost:3000/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
         body: JSON.stringify(formState),
       });
 
-      const data = await reponse.json();
+      const data = await response.json();
 
       if (response.ok) {
         localStorage.setItem("isLogged", "true");
@@ -56,12 +56,12 @@ export const LoginPage = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-slate-700 text-sm font-medium mb-1">
-              Usuario
+              Email
             </label>
             <input
-              type="text"
-              name="username"
-              value={formState.username}
+              type="email"
+              name="email"
+              value={formState.email}
               onChange={handleInputChange}
               required
               className="w-full border border-slate-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"

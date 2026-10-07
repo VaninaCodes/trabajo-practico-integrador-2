@@ -15,7 +15,13 @@ Aplicación desarrollada en React con Vite y Tailwind CSS.
    cd trabajo-practico-integrador-2
 
 2. Instalar las dependencias necesarias:
-   npm install
+### Terminal 1
+cd backend
+npm install
+
+### Terminal 2
+cd frontend/blog_personal
+npm install
 
 3. Iniciar el servidor de desarrollo:
    npm run dev

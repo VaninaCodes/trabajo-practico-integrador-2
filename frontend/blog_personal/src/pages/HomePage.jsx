@@ -1,7 +1,7 @@
 import { useFetch } from "../hooks/useFetch";
 
 export const HomePage = () => {
-  const { data, loading, error } = useFetch(
+  const { data: articles, isLoading, error } = useFetch(
     "http://localhost:3000/api/articles",
   );
 
