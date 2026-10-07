@@ -17,10 +17,10 @@ export const Navbar = () => {
     }
   };
   return (
-    <nav className="bg-slate-900 text-white p-4 shadow-md flex justify-between items-center">
+    <nav className="bg-[#655A7C] text-[#FDF1E2] p-4 shadow-md flex justify-between items-center">
       <Link
         to="/"
-        className="text-xl font-bold text-indigo-400 hover:text-indigo-300"
+        className="text-xl font-bold text-[#FDF1E2] hover:text-[#AB92BF]"
       >
         Blog Personal
       </Link>

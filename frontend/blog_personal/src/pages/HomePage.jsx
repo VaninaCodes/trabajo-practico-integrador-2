@@ -6,13 +6,13 @@ export const HomePage = () => {
   );
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-slate-800 mb-6">
+    <div className="max-w-4xl mx-auto p-6 bg-[#FDF1E2]">
+      <h1 className="text-3xl font-bold text-[#AB92BF] mb-6">
         Artículos Publicados
       </h1>
 
       {isLoading && (
-        <p className="text-indigo-600 font-semibold">Cargando artículos...</p>
+        <p className="text-[#AB92BF] font-semibold">Cargando artículos...</p>
       )}
 
       {error && (
@@ -20,7 +20,7 @@ export const HomePage = () => {
       )}
 
       {!isLoading && !error && articles && articles.length === 0 && (
-        <p className="text-slate-500">
+        <p className="text-[#AB92BF]">
           No hay artículos disponibles por el momento.
         </p>
       )}
@@ -30,15 +30,15 @@ export const HomePage = () => {
           articles.map((article) => (
             <article
               key={article.id}
-              className="bg-white p-6 rounded-lg shadow-md border border-slate-200"
+              className="bg-white p-6 rounded-lg shadow-md border border-[#AB92BF]"
             >
-              <h2 className="text-2xl font-bold text-indigo-900 mb-2">
+              <h2 className="text-2xl font-bold text-[#AB92BF] mb-2">
                 {article.title}
               </h2>
-              <p className="text-slate-600 mb-4">
+              <p className="text-[#655A7C] mb-4">
                 {article.excerpt || article.content.substring(0, 150) + "..."}
               </p>
-              <div className="flex justify-between items-center text-xs text-slate-400">
+              <div className="flex justify-between items-center text-xs text-[#655A7C]">
                 <span>
                   Autor:{" "}
                   {article.author ? article.author.username : "Desconocido"}

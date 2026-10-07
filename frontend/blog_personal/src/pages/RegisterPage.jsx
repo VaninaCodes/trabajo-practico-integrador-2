@@ -47,9 +47,9 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#FDF1E2] flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">Registro de Usuario</h2>
+        <h2 className="text-2xl font-bold text-[#AB92BF] mb-6 text-center">Registro de Usuario</h2>
 
         {errors.length > 0 && (
           <div className="bg-red-100 border border-red-400 text-red-700 p-3 rounded mb-4 text-sm space-y-1">
@@ -109,14 +109,14 @@ export const RegisterPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded font-semibold transition"
+            className="w-full bg-[#655A7C] hover:bg-[#AB92BF] text-white p-2 rounded font-semibold transition"
           >
             {loading ? 'Registrando...' : 'Registrarse'}
           </button>
         </form>
 
         <p className="text-sm text-center text-slate-600 mt-4">
-          ¿Ya tienes cuenta? <Link to="/login" className="text-indigo-600 hover:underline">Inicia Sesión</Link>
+          ¿Ya tienes cuenta? <Link to="/login" className="text-[#AB92BF] hover:underline">Inicia Sesión</Link>
         </p>
       </div>
     </div>

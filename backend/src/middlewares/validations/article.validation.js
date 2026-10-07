@@ -28,7 +28,10 @@ export const createArticleValidation = [
         .isLength({max: 500}).withMessage("El resumen no puede superar los 500 caracteres"),
     body("status")
         .optional()
-        .isIn(estadosPermitidos).withMessage(`El estado solo puede ser: ${estadosPermitidos}`)
+        .isIn(estadosPermitidos).withMessage(`El estado solo puede ser: ${estadosPermitidos}`),
+    body("user_id")
+        .notEmpty().withMessage("El id del usuario no debe ser vacio")
+        .isInt({min: 1}).withMessage("El id del usuario debe ser un numero entero positivo")
         .custom(async(user_id)=>{
             const user = await userModel.findByPk(user_id);
             if(!user){
@@ -59,7 +62,10 @@ export const updateArticleValidation = [
         .isLength({max: 500}).withMessage("El resumen no puede superar los 500 caracteres"),
     body("status")
         .optional()
-        .isIn(estadosPermitidos).withMessage(`El estado solo puede ser: ${estadosPermitidos}`)
+        .isIn(estadosPermitidos).withMessage(`El estado solo puede ser: ${estadosPermitidos}`),
+    body("user_id")
+        .notEmpty().withMessage("El id del usuario no debe ser vacio")
+        .isInt({min: 1}).withMessage("El id del usuario debe ser un numero entero positivo")
         .custom(async(user_id)=>{
             const user = await userModel.findByPk(user_id);
             if(!user){

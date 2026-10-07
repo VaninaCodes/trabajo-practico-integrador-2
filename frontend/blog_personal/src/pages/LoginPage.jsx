@@ -41,9 +41,9 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#FDF1E2] flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-[#AB92BF] mb-6 text-center">
           Iniciar Sesión
         </h2>
 
@@ -64,7 +64,7 @@ export const LoginPage = () => {
               value={formState.email}
               onChange={handleInputChange}
               required
-              className="w-full border border-slate-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-slate-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#AB92BF]"
             />
           </div>
 
@@ -78,14 +78,14 @@ export const LoginPage = () => {
               value={formState.password}
               onChange={handleInputChange}
               required
-              className="w-full border border-slate-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-slate-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#AB92BF]"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded font-semibold transition"
+            className="w-full bg-[#655A7C] hover:bg-[#AB92BF] text-white p-2 rounded font-semibold transition"
           >
             {loading ? "Ingresando..." : "Entrar"}
           </button>
